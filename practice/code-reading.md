@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+line 4 has block scope variable and other console.log will print global variable because it would not have access to inner variable
 ## Question 2
 
 Take a look at the following code:
@@ -34,7 +34,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
-
+console.log(y will give reference error)
 ## Question 3
 
 Take a look at the following code:
@@ -49,6 +49,8 @@ function f1(val) {
 
 f1(x);
 console.log(x);
+9
+
 
 const y = { x: 9 };
 
@@ -60,5 +62,5 @@ function f2(val) {
 f2(y);
 console.log(y);
 ```
-
+{x:10}
 What will be the output of this code. Explain your answer in 50 words or less.
