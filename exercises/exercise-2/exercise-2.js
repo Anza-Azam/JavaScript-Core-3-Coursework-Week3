@@ -73,7 +73,10 @@ let hogwarts = [
 
 const [a, b, c, d, e, f, g, h, i, j] = hogwarts;
 const arr = [a, b, c, d, e, f, g, h, i, j];
+console.log('part 1')
 const result = arr.filter((person) => (person.house === "Gryffindor"));
-
-console.log(result.map(person => `${ person.firstName } ${person.lastName}`));
+result.map(person => console.log(`${ person.firstName } ${person.lastName}`));
  
+const teacherWithPets = arr.filter(person => { if (person.pet!==null &&person.occupation==='Teacher') { return person } })
+console.log('\n part 2')
+  teacherWithPets.map((person) => console.log(`${person.firstName} ${person.lastName}`));
