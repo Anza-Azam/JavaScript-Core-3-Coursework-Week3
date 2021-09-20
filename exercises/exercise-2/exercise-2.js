@@ -70,3 +70,10 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const [a, b, c, d, e, f, g, h, i, j] = hogwarts;
+const arr = [a, b, c, d, e, f, g, h, i, j];
+const result = arr.filter((person) => (person.house === "Gryffindor"));
+
+console.log(result.map(person => `${ person.firstName } ${person.lastName}`));
+ 
