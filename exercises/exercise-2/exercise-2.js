@@ -81,6 +81,6 @@ hogwarts.filter(({ firstName, lastName, house }) => {
 console.log("\n part 2 All teachers with pet");
 hogwarts.filter(({firstName,lastName, pet,occupation}) => {
   if (pet !== null && occupation === "Teacher") {
-        console.log(`${firstName} ${lastName}`);
+       console.log (`${firstName} ${lastName}`);
   }
 });
