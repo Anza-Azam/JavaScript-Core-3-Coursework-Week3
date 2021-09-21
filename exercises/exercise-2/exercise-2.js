@@ -71,12 +71,16 @@ let hogwarts = [
   },
 ];
 
-const [a, b, c, d, e, f, g, h, i, j] = hogwarts;
-const arr = [a, b, c, d, e, f, g, h, i, j];
-console.log('part 1')
-const result = arr.filter((person) => (person.house === "Gryffindor"));
-result.map(person => console.log(`${ person.firstName } ${person.lastName}`));
- 
-const teacherWithPets = arr.filter(person => { if (person.pet!==null &&person.occupation==='Teacher') { return person } })
-console.log('\n part 2')
-  teacherWithPets.map((person) => console.log(`${person.firstName} ${person.lastName}`));
+console.log("part 1: persons with house name Gryffindor");
+hogwarts.filter(({ firstName, lastName, house }) => {
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+});
+
+console.log("\n part 2 All teachers with pet");
+hogwarts.filter(({firstName,lastName, pet,occupation}) => {
+  if (pet !== null && occupation === "Teacher") {
+        console.log(`${firstName} ${lastName}`);
+  }
+});
