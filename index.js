@@ -12,12 +12,4 @@
 // console.log(`${birmingham.name} population is ${birmingham.population}`);
 // console.log(`${glasgow.name} population is ${glasgow.population}`);
 // console.log(`${manchester.name} population is ${manchester.population}`);
-const y = { x: 9 };
 
-function f2(val) {
-  val.x = val.x + 1;
-  return val;
-}
-
-f2(y);
-console.log(y);

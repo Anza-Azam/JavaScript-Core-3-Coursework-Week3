@@ -15,7 +15,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-line 4 has block scope variable and other console.log will print global variable because it would not have access to inner variable
+Answer: 
+line 4 has block scope variable and other console.log will print global variable because it would not have access to function variable and function has not been called or assigned.
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +35,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+Answer: 10
 console.log(y will give reference error)
 ## Question 3
 
@@ -49,7 +51,7 @@ function f1(val) {
 
 f1(x);
 console.log(x);
-9
+Answer: 9
 
 
 const y = { x: 9 };
@@ -62,5 +64,6 @@ function f2(val) {
 f2(y);
 console.log(y);
 ```
-{x:10}
+
 What will be the output of this code. Explain your answer in 50 words or less.
+Answer {x:10}
