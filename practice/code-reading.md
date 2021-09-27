@@ -66,4 +66,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
-Answer {x:10}
+Answer {x:10}, y is an object with property x equal to nine so when the function is called with y , val is y
+and val.x is 9 , it therefore changes its value to 10 by adding 1 to it and returns it after that on the next line when
+y object is printed it will display {x:10} because 1 is added to y.x's previous value.
