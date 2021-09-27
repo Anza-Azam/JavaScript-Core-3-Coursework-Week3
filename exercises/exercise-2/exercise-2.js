@@ -72,19 +72,9 @@ let hogwarts = [
 ];
 
 console.log("part 1: persons with house name Gryffindor");
-const gryffindors= hogwarts.filter(({ house }) => house==='Gryffindor'
-);
-
-
-
-gryffindors.forEach(({ firstName, lastName }) => {
+hogwarts.filter(({ house }) => house==='Gryffindor').forEach(({ firstName, lastName }) => {
   console.log(`${firstName} ${lastName}`);
 })
 
 console.log("\n part 2 All teachers with pet");
-const petOwningTeachers= hogwarts.filter(({pet,occupation}) =>  pet !== null && occupation === "Teacher"
-    
-  
-);
-
-petOwningTeachers.forEach(({ firstName, lastName }) => { console.log(`${firstName} ${lastName}`) });
+ hogwarts.filter(({pet,occupation}) =>  pet !== null && occupation === "Teacher").forEach(({ firstName, lastName }) => { console.log(`${firstName} ${lastName}`) });
