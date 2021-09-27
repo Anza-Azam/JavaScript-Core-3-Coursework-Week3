@@ -6,44 +6,17 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
-
-
- console.log("QTY " + "     ITEM    " + "                  TOTAL ");
-let price= order.map(({ quantity, itemName, unitPrice },index) => {
+let totalPrice=0.0;
+ order.forEach(({ itemName, quantity, unitPrice }) => {
+   
+   console.log(
+     `${(quantity + "").padEnd(10, " ")}${itemName.padEnd(30, " ")}${(
+       unitPrice * quantity
+     ).toFixed(2)}`
+   );
+   totalPrice += (unitPrice * quantity);
   
-  if (index === 2) {
-    console.log(
-      `${quantity}        ${itemName}              ${(
-        unitPrice * quantity
-      ).toFixed(2)}`
-    );
-  }
-  else if (index === 3) {
-    console.log(
-      `${quantity}        ${itemName}          ${(
-        unitPrice * quantity
-      ).toFixed(2)}`
-    );
-  }
-    else  if (index >3) {
-    console.log(
-      `${quantity}        ${itemName}                ${(
-        unitPrice * quantity
-      ).toFixed(2)}`
-    );
-  } else {
-    console.log(
-      `${quantity}        ${itemName}                 ${(
-        unitPrice * quantity
-      ).toFixed(2)}`
-    );
-  }})
+ });
+console.log(`Total Price: ${totalPrice}`)
 
-
-const [a, b, c, d, e, f] = order;
-const items = [a, b, c, d, e, f];
-let prices = items.map(element => parseFloat((element.unitPrice * element.quantity).toFixed(2)))
-console.log("\n" +
-    "Total Price: " +
-    prices.reduce((totalPrice, curr) => totalPrice + curr)
-);
+ 
